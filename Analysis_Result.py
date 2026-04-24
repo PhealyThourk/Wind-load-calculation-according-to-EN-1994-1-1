@@ -96,7 +96,7 @@ def Run_Analysis_Result(z, Vb0, Terrain_category, Building_width, Building_heigh
     })
 
     # Apply format to each cell at the left end
-    for row in range(5, 300):          # Row indices (0-based, so row 3 = A4)
+    for row in range(5, 400):          # Row indices (0-based, so row 3 = A4)
         worksheet.write(row, 0, '', border_left_format)
         worksheet.write(row-1, 7, '', border_right_format)
         worksheet.write(row-1, 9, '', border_right_format)
@@ -922,7 +922,39 @@ def Run_Analysis_Result(z, Vb0, Terrain_category, Building_width, Building_heigh
         worksheet.write(f"F{224+Vertical_space-8}", f"{round(qpez_roof_short_case1[2],2)}", Normal_formart)
         worksheet.write(f"F{225+Vertical_space-8}", f"{round(qpez_roof_short_case1[3],2)}", Normal_formart)
         worksheet.write(f"F{226+Vertical_space-8}", f"{round(qpez_roof_short_case1[4],2)}", Normal_formart)
-    
+
+        worksheet.write(f"A{228+Vertical_space-8}", "Combine external and internal pressures to get net pressure", border_left_format)
+        worksheet.write(f"A{229+Vertical_space-8}", "combine with cpi = 0.2", border_left_format)
+        worksheet.write(f"E{229+Vertical_space-8}", "combine with cpi = -0.3", Normal_formart)
+
+        worksheet.write(f"A{231+Vertical_space-8}", "Zone", border_left_format)
+        worksheet.write(f"B{231+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+        worksheet.write(f"E{231+Vertical_space-8}", "Zone", Normal_formart)
+        worksheet.write(f"F{231+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+
+        worksheet.write(f"A{232+Vertical_space-8}", "A", border_left_format)
+        worksheet.write(f"A{233+Vertical_space-8}", "B", border_left_format)
+        worksheet.write(f"A{234+Vertical_space-8}", "C", border_left_format)
+        worksheet.write(f"A{235+Vertical_space-8}", "D", border_left_format)
+        worksheet.write(f"A{236+Vertical_space-8}", "E", border_left_format)
+        worksheet.write(f"A{237+Vertical_space-8}", "F", border_left_format)
+        worksheet.write(f"A{238+Vertical_space-8}", "G", border_left_format)
+        worksheet.write(f"A{239+Vertical_space-8}", "H", border_left_format)
+        worksheet.write(f"A{240+Vertical_space-8}", "I", border_left_format)
+        worksheet.write(f"A{241+Vertical_space-8}", "J", border_left_format)
+
+        worksheet.write(f"E{232+Vertical_space-8}", "A", Normal_formart)
+        worksheet.write(f"E{233+Vertical_space-8}", "B", Normal_formart)
+        worksheet.write(f"E{234+Vertical_space-8}", "C", Normal_formart)
+        worksheet.write(f"E{235+Vertical_space-8}", "D", Normal_formart)
+        worksheet.write(f"E{236+Vertical_space-8}", "E", Normal_formart)
+        worksheet.write(f"E{237+Vertical_space-8}", "F", Normal_formart)
+        worksheet.write(f"E{238+Vertical_space-8}", "G", Normal_formart)
+        worksheet.write(f"E{239+Vertical_space-8}", "H", Normal_formart)
+        worksheet.write(f"E{240+Vertical_space-8}", "I", Normal_formart)
+        worksheet.write(f"E{241+Vertical_space-8}", "J", Normal_formart)
+
+
     elif Roof_slope > 45 :
         worksheet.write(f"A{222+Vertical_space-8}", "F", border_left_format)
         worksheet.write(f"A{223+Vertical_space-8}", "G", border_left_format)
@@ -965,6 +997,37 @@ def Run_Analysis_Result(z, Vb0, Terrain_category, Building_width, Building_heigh
         worksheet.write(f"F{225+Vertical_space-8}", f"{round(qpez_roof_short_case1[3],2)}", Normal_formart)
         worksheet.write(f"F{226+Vertical_space-8}", f"{round(qpez_roof_short_case1[4],2)}", Normal_formart)
 
+        worksheet.write(f"A{228+Vertical_space-8}", "Combine external and internal pressures to get net pressure", border_left_format)
+        worksheet.write(f"A{229+Vertical_space-8}", "combine with cpi = 0.2", border_left_format)
+        worksheet.write(f"E{229+Vertical_space-8}", "combine with cpi = -0.3", Normal_formart)
+
+        worksheet.write(f"A{231+Vertical_space-8}", "Zone", border_left_format)
+        worksheet.write(f"B{231+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+        worksheet.write(f"E{231+Vertical_space-8}", "Zone", Normal_formart)
+        worksheet.write(f"F{231+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+
+        worksheet.write(f"A{232+Vertical_space-8}", "A", border_left_format)
+        worksheet.write(f"A{233+Vertical_space-8}", "B", border_left_format)
+        worksheet.write(f"A{234+Vertical_space-8}", "C", border_left_format)
+        worksheet.write(f"A{235+Vertical_space-8}", "D", border_left_format)
+        worksheet.write(f"A{236+Vertical_space-8}", "E", border_left_format)
+        worksheet.write(f"A{237+Vertical_space-8}", "F", border_left_format)
+        worksheet.write(f"A{238+Vertical_space-8}", "G", border_left_format)
+        worksheet.write(f"A{239+Vertical_space-8}", "H", border_left_format)
+        worksheet.write(f"A{240+Vertical_space-8}", "I", border_left_format)
+        worksheet.write(f"A{241+Vertical_space-8}", "J", border_left_format)
+
+        worksheet.write(f"E{232+Vertical_space-8}", "A", Normal_formart)
+        worksheet.write(f"E{233+Vertical_space-8}", "B", Normal_formart)
+        worksheet.write(f"E{234+Vertical_space-8}", "C", Normal_formart)
+        worksheet.write(f"E{235+Vertical_space-8}", "D", Normal_formart)
+        worksheet.write(f"E{236+Vertical_space-8}", "E", Normal_formart)
+        worksheet.write(f"E{237+Vertical_space-8}", "F", Normal_formart)
+        worksheet.write(f"E{238+Vertical_space-8}", "G", Normal_formart)
+        worksheet.write(f"E{239+Vertical_space-8}", "H", Normal_formart)
+        worksheet.write(f"E{240+Vertical_space-8}", "I", Normal_formart)
+        worksheet.write(f"E{241+Vertical_space-8}", "J", Normal_formart)
+
     else:
         worksheet.write(f"A{220 + Vertical_space-8}", "Case 1", border_left_format)
         worksheet.write(f"A{222+Vertical_space-8}", "F", border_left_format)
@@ -1002,6 +1065,7 @@ def Run_Analysis_Result(z, Vb0, Terrain_category, Building_width, Building_heigh
         worksheet.write(f"F{224+Vertical_space-8}", f"{round(qpez_roof_short_case1[2],2)}", Normal_formart)
         worksheet.write(f"F{225+Vertical_space-8}", f"{round(qpez_roof_short_case1[3],2)}", Normal_formart)
         worksheet.write(f"F{226+Vertical_space-8}", f"{round(qpez_roof_short_case1[4],2)}", Normal_formart)
+
 
         # Case 2
         worksheet.write(f"A{228 + Vertical_space-8}", "Case 2", border_left_format)
@@ -1041,6 +1105,7 @@ def Run_Analysis_Result(z, Vb0, Terrain_category, Building_width, Building_heigh
         worksheet.write(f"F{232+Vertical_space-8}", f"{round(qpez_roof_short_case2[3],2)}", Normal_formart)
         worksheet.write(f"F{233+Vertical_space-8}", f"{round(qpez_roof_short_case2[4],2)}", Normal_formart)
 
+
         # Case 3
 
         worksheet.write(f"A{235 + Vertical_space-8}", "Case 3", border_left_format)
@@ -1079,6 +1144,7 @@ def Run_Analysis_Result(z, Vb0, Terrain_category, Building_width, Building_heigh
         worksheet.write(f"F{238+Vertical_space-8}", f"{round(qpez_roof_short_case3[2],2)}", Normal_formart)
         worksheet.write(f"F{239+Vertical_space-8}", f"{round(qpez_roof_short_case3[3],2)}", Normal_formart)
         worksheet.write(f"F{240+Vertical_space-8}", f"{round(qpez_roof_short_case3[4],2)}", Normal_formart)
+
 
         # Case 4
 
@@ -1125,7 +1191,133 @@ def Run_Analysis_Result(z, Vb0, Terrain_category, Building_width, Building_heigh
             worksheet.insert_image(f"B{249+Vertical_space-8}", "Duopitch_wind0_general_2.png", {'x_scale': 0.8, 'y_scale': 0.8})
         worksheet.insert_image(f"B{253+6+Vertical_space-8}", "Duopitch_wind0_surface.png", {'x_scale': 0.8, 'y_scale': 0.8})
 
+        worksheet.write(f"A{273+Vertical_space-8}", "Combine external and internal pressures to get net pressure (Case 1)", border_left_format)
+        worksheet.write(f"A{274+Vertical_space-8}", "combine with cpi = 0.2", border_left_format)
+        worksheet.write(f"E{274+Vertical_space-8}", "combine with cpi = -0.3", Normal_formart)
 
+        worksheet.write(f"A{276+Vertical_space-8}", "Zone", border_left_format)
+        worksheet.write(f"B{276+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+        worksheet.write(f"E{276+Vertical_space-8}", "Zone", Normal_formart)
+        worksheet.write(f"F{276+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+
+        worksheet.write(f"A{277+Vertical_space-8}", "A", border_left_format)
+        worksheet.write(f"A{278+Vertical_space-8}", "B", border_left_format)
+        worksheet.write(f"A{279+Vertical_space-8}", "C", border_left_format)
+        worksheet.write(f"A{280+Vertical_space-8}", "D", border_left_format)
+        worksheet.write(f"A{281+Vertical_space-8}", "E", border_left_format)
+        worksheet.write(f"A{282+Vertical_space-8}", "F", border_left_format)
+        worksheet.write(f"A{283+Vertical_space-8}", "G", border_left_format)
+        worksheet.write(f"A{284+Vertical_space-8}", "H", border_left_format)
+        worksheet.write(f"A{285+Vertical_space-8}", "I", border_left_format)
+        worksheet.write(f"A{286+Vertical_space-8}", "J", border_left_format)
+
+        worksheet.write(f"E{277+Vertical_space-8}", "A", Normal_formart)
+        worksheet.write(f"E{278+Vertical_space-8}", "B", Normal_formart)
+        worksheet.write(f"E{279+Vertical_space-8}", "C", Normal_formart)
+        worksheet.write(f"E{280+Vertical_space-8}", "D", Normal_formart)
+        worksheet.write(f"E{281+Vertical_space-8}", "E", Normal_formart)
+        worksheet.write(f"E{282+Vertical_space-8}", "F", Normal_formart)
+        worksheet.write(f"E{283+Vertical_space-8}", "G", Normal_formart)
+        worksheet.write(f"E{284+Vertical_space-8}", "H", Normal_formart)
+        worksheet.write(f"E{285+Vertical_space-8}", "I", Normal_formart)
+        worksheet.write(f"E{286+Vertical_space-8}", "J", Normal_formart)
+
+        # Case 2
+
+        worksheet.write(f"A{288+Vertical_space-8}", "Combine external and internal pressures to get net pressure (Case 2)", border_left_format)
+        worksheet.write(f"A{289+Vertical_space-8}", "combine with cpi = 0.2", border_left_format)
+        worksheet.write(f"E{289+Vertical_space-8}", "combine with cpi = -0.3", Normal_formart)
+
+        worksheet.write(f"A{291+Vertical_space-8}", "Zone", border_left_format)
+        worksheet.write(f"B{291+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+        worksheet.write(f"E{291+Vertical_space-8}", "Zone", Normal_formart)
+        worksheet.write(f"F{291+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+
+        worksheet.write(f"A{292+Vertical_space-8}", "A", border_left_format)
+        worksheet.write(f"A{293+Vertical_space-8}", "B", border_left_format)
+        worksheet.write(f"A{294+Vertical_space-8}", "C", border_left_format)
+        worksheet.write(f"A{295+Vertical_space-8}", "D", border_left_format)
+        worksheet.write(f"A{296+Vertical_space-8}", "E", border_left_format)
+        worksheet.write(f"A{297+Vertical_space-8}", "F", border_left_format)
+        worksheet.write(f"A{298+Vertical_space-8}", "G", border_left_format)
+        worksheet.write(f"A{299+Vertical_space-8}", "H", border_left_format)
+        worksheet.write(f"A{300+Vertical_space-8}", "I", border_left_format)
+        worksheet.write(f"A{301+Vertical_space-8}", "J", border_left_format)
+
+        worksheet.write(f"E{292+Vertical_space-8}", "A", Normal_formart)
+        worksheet.write(f"E{293+Vertical_space-8}", "B", Normal_formart)
+        worksheet.write(f"E{294+Vertical_space-8}", "C", Normal_formart)
+        worksheet.write(f"E{295+Vertical_space-8}", "D", Normal_formart)
+        worksheet.write(f"E{296+Vertical_space-8}", "E", Normal_formart)
+        worksheet.write(f"E{297+Vertical_space-8}", "F", Normal_formart)
+        worksheet.write(f"E{298+Vertical_space-8}", "G", Normal_formart)
+        worksheet.write(f"E{299+Vertical_space-8}", "H", Normal_formart)
+        worksheet.write(f"E{300+Vertical_space-8}", "I", Normal_formart)
+        worksheet.write(f"E{301+Vertical_space-8}", "J", Normal_formart)
+
+        # Case 3
+        worksheet.write(f"A{303+Vertical_space-8}", "Combine external and internal pressures to get net pressure (Case 3)", border_left_format)
+        worksheet.write(f"A{304+Vertical_space-8}", "combine with cpi = 0.2", border_left_format)
+        worksheet.write(f"E{304+Vertical_space-8}", "combine with cpi = -0.3", Normal_formart)
+
+        worksheet.write(f"A{306+Vertical_space-8}", "Zone", border_left_format)
+        worksheet.write(f"B{306+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+        worksheet.write(f"E{306+Vertical_space-8}", "Zone", Normal_formart)
+        worksheet.write(f"F{306+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+
+        worksheet.write(f"A{307+Vertical_space-8}", "A", border_left_format)
+        worksheet.write(f"A{308+Vertical_space-8}", "B", border_left_format)
+        worksheet.write(f"A{309+Vertical_space-8}", "C", border_left_format)
+        worksheet.write(f"A{310+Vertical_space-8}", "D", border_left_format)
+        worksheet.write(f"A{311+Vertical_space-8}", "E", border_left_format)
+        worksheet.write(f"A{312+Vertical_space-8}", "F", border_left_format)
+        worksheet.write(f"A{313+Vertical_space-8}", "G", border_left_format)
+        worksheet.write(f"A{314+Vertical_space-8}", "H", border_left_format)
+        worksheet.write(f"A{315+Vertical_space-8}", "I", border_left_format)
+        worksheet.write(f"A{316+Vertical_space-8}", "J", border_left_format)
+
+        worksheet.write(f"E{307+Vertical_space-8}", "A", Normal_formart)
+        worksheet.write(f"E{308+Vertical_space-8}", "B", Normal_formart)
+        worksheet.write(f"E{309+Vertical_space-8}", "C", Normal_formart)
+        worksheet.write(f"E{310+Vertical_space-8}", "D", Normal_formart)
+        worksheet.write(f"E{311+Vertical_space-8}", "E", Normal_formart)
+        worksheet.write(f"E{312+Vertical_space-8}", "F", Normal_formart)
+        worksheet.write(f"E{313+Vertical_space-8}", "G", Normal_formart)
+        worksheet.write(f"E{314+Vertical_space-8}", "H", Normal_formart)
+        worksheet.write(f"E{315+Vertical_space-8}", "I", Normal_formart)
+        worksheet.write(f"E{316+Vertical_space-8}", "J", Normal_formart)
+
+         # Case 4
+        worksheet.write(f"A{318+Vertical_space-8}", "Combine external and internal pressures to get net pressure (Case 4)", border_left_format)
+        worksheet.write(f"A{319+Vertical_space-8}", "combine with cpi = 0.2", border_left_format)
+        worksheet.write(f"E{319+Vertical_space-8}", "combine with cpi = -0.3", Normal_formart)
+
+        worksheet.write(f"A{321+Vertical_space-8}", "Zone", border_left_format)
+        worksheet.write(f"B{321+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+        worksheet.write(f"E{321+Vertical_space-8}", "Zone", Normal_formart)
+        worksheet.write(f"F{321+Vertical_space-8}", "Net pressure [kPa]", Normal_formart)
+
+        worksheet.write(f"A{322+Vertical_space-8}", "A", border_left_format)
+        worksheet.write(f"A{323+Vertical_space-8}", "B", border_left_format)
+        worksheet.write(f"A{324+Vertical_space-8}", "C", border_left_format)
+        worksheet.write(f"A{325+Vertical_space-8}", "D", border_left_format)
+        worksheet.write(f"A{326+Vertical_space-8}", "E", border_left_format)
+        worksheet.write(f"A{327+Vertical_space-8}", "F", border_left_format)
+        worksheet.write(f"A{328+Vertical_space-8}", "G", border_left_format)
+        worksheet.write(f"A{329+Vertical_space-8}", "H", border_left_format)
+        worksheet.write(f"A{330+Vertical_space-8}", "I", border_left_format)
+        worksheet.write(f"A{331+Vertical_space-8}", "J", border_left_format)
+
+        worksheet.write(f"E{322+Vertical_space-8}", "A", Normal_formart)
+        worksheet.write(f"E{323+Vertical_space-8}", "B", Normal_formart)
+        worksheet.write(f"E{324+Vertical_space-8}", "C", Normal_formart)
+        worksheet.write(f"E{325+Vertical_space-8}", "D", Normal_formart)
+        worksheet.write(f"E{326+Vertical_space-8}", "E", Normal_formart)
+        worksheet.write(f"E{327+Vertical_space-8}", "F", Normal_formart)
+        worksheet.write(f"E{328+Vertical_space-8}", "G", Normal_formart)
+        worksheet.write(f"E{329+Vertical_space-8}", "H", Normal_formart)
+        worksheet.write(f"E{330+Vertical_space-8}", "I", Normal_formart)
+        worksheet.write(f"E{331+Vertical_space-8}", "J", Normal_formart)
 
 
 
